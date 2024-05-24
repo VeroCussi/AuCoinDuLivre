@@ -1,7 +1,6 @@
 body {
     font-family: "Montserrat", sans-serif;
     color: #001730;
-    text-decoration: none;
     max-width: 100%;
     margin: 0px;
 }
@@ -12,8 +11,9 @@ h1 {
     font-size: 4vw; /*3.12 vw es el equivalente a 60px*/
     font-weight: 700;
     margin-left: 2%;
-    text-decoration-line: none;
 }
+
+
 
 /* Estilos de la sección menú de navegación */
 
@@ -25,12 +25,17 @@ header {
     padding: 10px 20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
     width: 27vw; /*26.82 vw es el equivalente a 515px*/
     max-width: 515px;
     height: auto;
 }
+
 
 nav ul {
     list-style: none;
@@ -59,7 +64,7 @@ nav ul li a .heart {
     background-color: white;
     color: #001730;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #D9D9D9;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -95,7 +100,7 @@ nav ul li a .heart {
     background-image: url('/Users/vero/Documents/Projet-ecommerce/library.jpg');
     background-size: cover;
     background-position: center;
-    height: 25em;
+    height: 25em; /* conversor: https://nekocalc.com/es/px-a-em-conversor*/
 }
 
 .hero-image .overlay {
@@ -110,33 +115,33 @@ nav ul li a .heart {
 .hero-text {
     position: relative;
     text-align: center;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .hero-text h1 {
     font-family: 'Libre Baskerville', serif;
-    font-size: 3em;
+    font-size: 3rem;
     margin: 0 0 30px 0;
 }
 
 .hero-text p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 700;
     margin: 0;
 }
 
 .search-box {
-    position:relative;
     background-color: white;
-    padding: 35px;
+    padding: 2rem;
     max-width: 30%;
     color: #001730;
+    margin: auto;
 }
 
 .search-box h2 {
     font-family: 'Libre Baskerville', serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin: 0 0 20px 0;
 }
 
@@ -151,7 +156,7 @@ nav ul li a .heart {
     margin: 10px 0;
     border: 1px solid #D9D9D9;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #001730;
 }
@@ -178,7 +183,7 @@ nav ul li a .heart {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #fff;
-    padding-top: 1.25em;
+    padding-top: 1.25rem;
     position: relative;
 }
 
@@ -198,62 +203,288 @@ nav ul li a .heart {
 }
 
 .category-item img {
-    max-width: 70px;
-    height: 70px;
+    max-width: 4.4rem;
+    height: 4.4rem;
     margin-bottom: 10px;
 }
 
 .category-item p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     color: #001730;
     font-weight: bold;
 }
 
 /* Estilos de la sección Meilleures Ventes */
 
+.best-sellers {
+    padding: 1.25rem;
+}
 
+.best-sellers h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    justify-items: center;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 19rem;
+    height: 30rem;
+}
+
+.grid-item img {
+    max-width: 14rem; 
+    height: 16rem;
+    border-radius: 5px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.rating span {
+    margin: 0 5px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price button {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-family: montserrat;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.new-price {
+    background-color: #BD1E51; /* libros nuevos */
+    color: white;
+
+}
+
+.used-price {
+    background-color: #F1B814; /* libros de ocasión */
+    color:#001730;
+}
 
 
 /* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 6vw;
-        margin-left: 5%;
-    }
-    
-    .logo {
-        width: 50vw;
-    }
+
+@media (max-width: 1024px) {
     
     header {
         flex-direction: column;
         align-items: flex-start;
     }
     
-    nav ul {
+
+    .hero {
         flex-direction: column;
-        align-items: flex-start;
     }
-    
-    nav ul li {
-        margin: 5px 0;
+
+    .hero-text h1 {
+        font-size: 2rem;
+        padding-top: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding-bottom: 1.25rem;
+
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto; /* conversor: https://nekocalc.com/es/px-a-rem-conversor */
+    }
+
+    .search-box {
+        max-width: 90%;
+        margin: 1.25rem auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .grid-item {
+        width: 18rem;
+        height: auto;
     }
 }
 
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo {
+        width: auto;
+        max-width: 80%;
+    }
+
+    nav {
+       
+        text-align: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    
+    
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        padding-top: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding-bottom: 1.25rem;
+
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .search-box {
+        max-width: 90%;
+        margin: 1.25rem auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);  /*2 columnas para pantallas pequeñas */
+    }
+}
+
+    
+
 @media (max-width: 480px) {
     h1 {
-        font-size: 8vw;
-        margin-left: 5%;
+        font-size: 2rem;
     }
     
     .logo {
-        width: 70vw;
+        width: 18rem;
+    }
+
+    nav ul {
+        display: none;
+    
+    }
+
+    .logo-container {
+        max-width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #F1B814;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
     }
     
     .button {
         width: 100%;
         text-align: center;
-        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        padding-top: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding-bottom: 1.25rem;
+
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto; /* conversor: https://nekocalc.com/es/px-a-rem-conversor */
+    }
+
+    .categories {
+        background-color: rgba(217, 217, 217, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .search-box {
+        max-width: 90%;
+    }
+
+    .best-sellers h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-item {
+        width: 18rem;
+        height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;  /*1 columna para pantallas muy pequeñas */
     }
 }
