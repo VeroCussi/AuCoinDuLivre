@@ -1,0 +1,259 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #001730;
+    text-decoration: none;
+    max-width: 100%;
+    margin: 0px;
+}
+
+
+h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 4vw; /*3.12 vw es el equivalente a 60px*/
+    font-weight: 700;
+    margin-left: 2%;
+    text-decoration-line: none;
+}
+
+/* Estilos de la sección menú de navegación */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1B814;
+    padding: 10px 20px;
+}
+
+
+.logo {
+    width: 27vw; /*26.82 vw es el equivalente a 515px*/
+    max-width: 515px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #001730;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a .heart {
+    color: red;
+}
+
+.button {
+    background-color: white;
+    color: #001730;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+    color: #001730;
+}
+
+/* Estilos de la sección hero */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    height: 1px;
+    background-color: #D9D9D9;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 69%; /* La imagen ocupa el 70% aprox */
+    background-image: url('/Users/vero/Documents/Projet-ecommerce/library.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 25em;
+}
+
+.hero-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 23, 48, 0.7); 
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.hero-text h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;
+    margin: 0 0 30px 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.search-box {
+    position:relative;
+    background-color: white;
+    padding: 35px;
+    max-width: 30%;
+    color: #001730;
+}
+
+.search-box h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+}
+
+.search-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box form input,
+.search-box form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #001730;
+}
+
+.search-box form input {
+    font-weight: lighter;
+}
+
+.search-box form button {
+    font-weight: 700;
+}
+
+.search-box form button {
+    background-color: #BD1E51; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de la sección categorías */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-top: 1.25em;
+    position: relative;
+}
+
+.categories::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    height: 1px;
+    background-color: #D9D9D9;
+}
+
+.category-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.category-item img {
+    max-width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #001730;
+    font-weight: bold;
+}
+
+/* Estilos de la sección Meilleures Ventes */
+
+
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+        margin-left: 5%;
+    }
+    
+    .logo {
+        width: 50vw;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+        margin-left: 5%;
+    }
+    
+    .logo {
+        width: 70vw;
+    }
+    
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
