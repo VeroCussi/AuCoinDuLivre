@@ -25,6 +25,10 @@ header {
     padding: 10px 20px;
 }
 
+.menu-togle {
+    display: none;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -126,7 +130,7 @@ nav ul li a .heart {
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
 }
@@ -234,7 +238,21 @@ nav ul li a .heart {
     justify-items: center;
 }
 
+.heart-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.heart.favorited {
+    color: red;
+}
+
 .grid-item {
+    position: relative;
     background-color: white;
     border: 1px solid #D9D9D9;
     border-radius: 10px;
@@ -302,6 +320,152 @@ nav ul li a .heart {
     color:#001730;
 }
 
+/* Estilo puntos carrusel */
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.carousel button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #490B3D;
+}
+.dots {
+    display: flex;
+    gap: 10px;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #490B3D;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #BD1E51;
+}
+
+/* Estilos Destacados IG & 2hand */
+
+.recommendations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.recommendation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.recommendation-item img {
+    width: 200px;
+    height: auto;
+    border: 5px solid #F1B814;
+}
+
+.recommendation-item h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.recommendation-item button {
+    background-color: #BD1E51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.recommendation-item button:hover {
+    background-color: #a11a42;
+}
+
+/* Estilos Top Clients */
+
+.top-clients {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.top-clients h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.client-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.client-item img {
+    width: 150px;
+    height: 250px;
+    border: 5px solid #F1B814;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-size: fit;
+
+}
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-details h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.client-details p {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+    color: #001730;
+}
+
+.client-details .rating {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.client-details button {
+    background-color: #BD1E51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.client-details button:hover {
+    background-color: #a11a42;
+}
+
+
 
 /* Media Queries para pantallas más pequeñas */
 
@@ -347,6 +511,28 @@ nav ul li a .heart {
         width: 18rem;
         height: auto;
     }
+
+    /* Estilo recomendations (revisar no funciona)*/
+
+    .recommendations {
+        flex-direction: column;
+    }
+
+    .recommendation-item {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recommendation-item img {
+        margin-bottom: 20px;
+    }
+
+    .recommendation-text {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -367,6 +553,10 @@ nav ul li a .heart {
         max-width: 80%;
     }
 
+    .menu-togle {
+        display: none;
+    }
+
     nav {
        
         text-align: center;
@@ -380,7 +570,6 @@ nav ul li a .heart {
         padding: 0;
     }
     
-    
 
     .hero {
         flex-direction: column;
@@ -389,27 +578,52 @@ nav ul li a .heart {
 
     .hero-text h1 {
         font-size: 2rem;
-        padding-top: 1.25rem;
+        padding-top: 2.5rem;
     }
 
     .hero-text p {
-        font-size: 1rem;
-        padding-bottom: 1.25rem;
+        font-size: 1.2rem;
+        padding-bottom: 2.5rem;
 
     }
 
     .hero-image {
         width: 100%;
-        height: auto;
+        height: 20rem;
     }
 
     .search-box {
-        max-width: 90%;
-        margin: 1.25rem auto;
+        max-width: 100%;
+        background-color: #F1B814;
+    }
+
+    .search-box form {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
     }
 
     .grid-container {
         grid-template-columns: repeat(2, 1fr);  /*2 columnas para pantallas pequeñas */
+    }
+
+    /* estilo top clients */
+
+    .client-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .client-image img {
+        margin-bottom: 20px;
+    }
+
+    .client-details {
+        align-items: center;
+    }
+
+    .client-details button {
+        align-self: center;
     }
 }
 
@@ -433,7 +647,7 @@ nav ul li a .heart {
         max-width: 100%;
     }
 
-    .menu-toggle {
+    .menu-togle {
         display: block;
         background-color: #F1B814;
         border: none;
@@ -485,6 +699,6 @@ nav ul li a .heart {
     }
 
     .grid-container {
-        grid-template-columns: 1fr;  /*1 columna para pantallas muy pequeñas */
+        grid-template-columns: 1fr;  /*1 columna */
     }
 }
