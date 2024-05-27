@@ -5,20 +5,25 @@ body {
     margin: 0px;
 }
 
-
-h1 {
-    font-family: "Libre Baskerville", serif;
-    font-size: 4vw; /*3.12 vw es el equivalente a 60px*/
-    font-weight: 700;
-    margin-left: 2%;
+h2 {
+    font-family: "Libre Baskerville";
+    font-size: 2rem;
+    color: #001730;
+    margin-left: auto;
 }
 
+button {
+    font-family: "montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
 
-
-/* Estilos de la sección menú de navegación */
+/* Estilos de la sección menú de navegación + logo */
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #F1B814;
@@ -35,7 +40,7 @@ header {
 }
 
 .logo {
-    width: 27vw; /*26.82 vw es el equivalente a 515px*/
+    width: 32rem; /*26.82 vw es el equivalente a 515px*/
     max-width: 515px;
     height: auto;
 }
@@ -56,6 +61,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #001730;
+    font-size: 20px;
     font-weight: bold;
     padding: 5px 10px;
 }
@@ -101,10 +107,10 @@ nav ul li a .heart {
     align-items: center;
     position: relative;
     width: 69%; /* La imagen ocupa el 70% aprox */
-    background-image: url('/Users/vero/Documents/Projet-ecommerce/library.jpg');
+    background-image: url('./images/library.jpg');
     background-size: cover;
     background-position: center;
-    height: 25em; /* conversor: https://nekocalc.com/es/px-a-em-conversor*/
+    height: 25rem;
 }
 
 .hero-image .overlay {
@@ -137,7 +143,7 @@ nav ul li a .heart {
 
 .search-box {
     background-color: white;
-    padding: 2rem;
+    padding: 1.78rem;
     max-width: 30%;
     color: #001730;
     margin: auto;
@@ -159,7 +165,6 @@ nav ul li a .heart {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #D9D9D9;
-    border-radius: 5px;
     font-size: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #001730;
@@ -167,10 +172,6 @@ nav ul li a .heart {
 
 .search-box form input {
     font-weight: lighter;
-}
-
-.search-box form button {
-    font-weight: 700;
 }
 
 .search-box form button {
@@ -223,12 +224,10 @@ nav ul li a .heart {
 
 .best-sellers {
     padding: 1.25rem;
-}
-
-.best-sellers h2 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
+    /*display: flex;  modificado */
+    /*flex-wrap: wrap;  modificado */
+    /*justify-content: space-around;  modificado */
+    /*align-items: center;  modificado */
 }
 
 .grid-container {
@@ -255,11 +254,11 @@ nav ul li a .heart {
     position: relative;
     background-color: white;
     border: 1px solid #D9D9D9;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 19rem;
+    width: 18rem;
     height: 30rem;
 }
 
@@ -301,10 +300,7 @@ nav ul li a .heart {
     padding: 10px;
     margin: 5px 0;
     border: none;
-    border-radius: 5px;
-    font-family: montserrat;
     font-size: 1rem;
-    font-weight: 700;
     cursor: pointer;
     width: 100%;
 }
@@ -350,60 +346,52 @@ nav ul li a .heart {
     background-color: #BD1E51;
 }
 
-/* Estilos Destacados IG & 2hand */
+/* Estilo recommendations */
 
-.recommendations {
+.featured-books {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
+    background-color: #fff;
 }
 
-.recommendation-item {
+.featured-book {
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 10px;
 }
 
-.recommendation-item img {
-    width: 200px;
-    height: auto;
+.featured-book img {
+    max-width: 15rem;
+    height: 20rem;
     border: 5px solid #F1B814;
+    background-size: cover;
 }
 
-.recommendation-item h3 {
-    font-size: 1.5rem;
-    margin: 20px 0;
+.featured-book-info {
+    flex: 2;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(217, 217, 217, 0.2);
+    padding: 20px;
+    margin: 0 10px;
 }
 
-.recommendation-item button {
-    background-color: #BD1E51;
-    color: white;
-    border: none;
+.featured-book-info h3 {
+    margin: 0 0 20px;
+}
+
+.featured-book-info button {
     padding: 10px 20px;
-    font-size: 1rem;
+    background-color: #BD1E51;
+    border: none;
+    color: white;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.recommendation-item button:hover {
-    background-color: #a11a42;
-}
-
-/* Estilos Top Clients */
-
-.top-clients {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.top-clients h2 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+/* Estilo Top Clientes */
 
 .client-item {
     display: grid;
@@ -412,6 +400,8 @@ nav ul li a .heart {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 30px;
     margin-bottom: 20px;
     padding: 20px;
     align-items: center;
@@ -424,7 +414,7 @@ nav ul li a .heart {
     border: 5px solid #F1B814;
     border-radius: 5px;
     margin-right: 20px;
-    background-size: fit;
+    background-size: cover;
 
 }
 
@@ -447,6 +437,8 @@ nav ul li a .heart {
 .client-details .rating {
     color: #FFD700;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
 }
 
 .client-details button {
@@ -456,7 +448,6 @@ nav ul li a .heart {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
     align-self: flex-start;
     margin-top: auto;
 }
@@ -466,110 +457,319 @@ nav ul li a .heart {
 }
 
 
+/* Estilo Newsletter */
 
-/* Media Queries para pantallas más pequeñas */
+/* Estilo Footer */
 
-@media (max-width: 1024px) {
-    
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
+/* Estilo Countries */
 
-    .hero {
-        flex-direction: column;
-    }
 
-    .hero-text h1 {
-        font-size: 2rem;
-        padding-top: 1.25rem;
-    }
 
-    .hero-text p {
-        font-size: 1rem;
-        padding-bottom: 1.25rem;
+/* ====== MEDIA QUERIES ====== */
 
-    }
-
-    .hero-image {
-        width: 100%;
-        height: auto; /* conversor: https://nekocalc.com/es/px-a-rem-conversor */
-    }
-
-    .search-box {
-        max-width: 90%;
-        margin: 1.25rem auto;
-    }
-
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
-
-    .grid-item {
-        width: 18rem;
-        height: auto;
-    }
-
-    /* Estilo recomendations (revisar no funciona)*/
-
-    .recommendations {
-        flex-direction: column;
-    }
-
-    .recommendation-item {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .recommendation-item img {
-        margin-bottom: 20px;
-    }
-
-    .recommendation-text {
-        align-items: center;
-        text-align: center;
-        margin: 0;
-    }
+@media screen and (max-width: 352px){
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1B814;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-@media (max-width: 768px) {
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+        
+.menu-togle {
+    display: block;
+    background-color: #F1B814; /* CAMBIAR EL DISEÑO DEL TOGGLE */
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
     
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
+nav ul {
+    display: none;
+        
+}
+        
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+        
+.logo {
+    width: 15rem;
+    max-width: 320px;
+    height: auto;
+}    
     
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+/* Estilos de la sección hero */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    
+.hero-image {
+    width: 100%; /* modificado*/
+    height: auto; /* modificado*/
+    padding-top: 10px; /* modificado*/
+    padding-bottom: 10px;/* modificado*/
+}
+    
+.hero-text h1 {
+    font-size: 2.6rem; /* modificado*/
+}
+    
+.hero-text p {
+    font-size: 1.2rem; /* modificado*/
+}
+    
+.search-box {
+    max-width: 100%; /* modificado*/
+}
+    
+.search-box form button {
+    background-color: #BD1E51; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    
+/* Estilos Categories */
+    
+.categories {
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de mejores ventas */ 
+/* hay un pequeño scroll lateral cuando implemento esto, ver que es */ 
+
+.grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+.grid-item {
+    width: 15rem;
+    height: auto;
+}
+
+/* Estilos Libros recomendados */
+
+.featured-books {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.featured-book {
+    display: none;
+}
+
+.featured-book-info {
+    margin: 10px 0;
+}
+
+/* Estilo Top Clientes */
+
+/* Estilo Newsletter */
+
+/* Estilo Footer */
+
+/* Estilo Countries */
+
+
+}
+
+/* Small Phones (x to 480px) */
+@media screen and (min-width: 353px) and (max-width: 480px){
+
+    /* Estilos de la sección menú de navegación + logo */
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1B814;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h2 {
+    text-align: center;
+}
+    
+.menu-togle {
+    display: block;
+    background-color: #F1B814; /* CAMBIAR EL DISEÑO DEL TOGGLE */
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav ul {
+    display: none;
+    
+}
+    
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+    
+.logo {
+    width: 20rem;
+    max-width: 400px;
+    height: auto;
+}
+
+    /* Estilos de la sección hero */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     }
 
-    .logo {
-        width: auto;
-        max-width: 80%;
-    }
+.hero-image {
+    width: 100%; /* modificado*/
+    height: auto; /* modificado*/
+    padding-top: 10px; /* modificado*/
+    padding-bottom: 10px;/* modificado*/
+}
 
-    .menu-togle {
-        display: none;
-    }
+.hero-text h1 {
+    font-size: 2.6rem; /* modificado*/
+}
 
-    nav {
-       
-        text-align: center;
-        align-items: center;
-    }
+.hero-text p {
+    font-size: 1.2rem; /* modificado*/
+}
 
+.search-box {
+    max-width: 100%; /* modificado*/
+}
+
+
+.search-box form button {
+    background-color: #BD1E51; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    /* Estilos Categories */
+
+.categories {
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de mejores ventas */  
+
+.grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+.grid-item {
+    height: auto;
+}
+
+/* Estilos Libros recomendados */
+
+.featured-books {
+    flex-direction: column;
+}
+
+.featured-book {
+    display: none;
+}
+
+.featured-book-info {
+    margin: 10px 0;
+}
+
+/* Estilo Top Clientes */
+
+/* Estilo Newsletter */
+
+/* Estilo Footer */
+
+/* Estilo Countries */
+
+
+}
+
+
+/* Phones (480px and 768) */
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1B814; 
+    padding: 10px 20px;
+}
+    
+    
+.logo {
+    width: 32rem; /*26.82 vw es el equivalente a 515px*/
+    max-width: 515px;
+    height: auto;
+    background-color: #F1B814;
+    padding-bottom: 15px;
+}
+    
     nav ul {
+        list-style: none;
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
         padding: 0;
     }
     
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #001730;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+    
+    nav ul li a .heart {
+        color: red;
+    }
+    
+    .button {
+        background-color: white;
+        color: #001730;
+        border-radius: 20px;
+        border: 1px solid #D9D9D9;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .button:hover {
+        background-color: #f0f0f0;
+        color: #001730;
+    }
+
+    /* Estilos de la sección hero */  
 
     .hero {
         flex-direction: column;
@@ -603,102 +803,146 @@ nav ul li a .heart {
         gap: 1rem;
     }
 
+    /* Estilos de mejores ventas */  
+
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);  /*2 columnas para pantallas pequeñas */
-    }
-
-    /* estilo top clients */
-
-    .client-item {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .client-image img {
-        margin-bottom: 20px;
-    }
-
-    .client-details {
-        align-items: center;
-    }
-
-    .client-details button {
-        align-self: center;
-    }
-}
-
-    
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .logo {
-        width: 18rem;
-    }
-
-    nav ul {
-        display: none;
-    
-    }
-
-    .logo-container {
-        max-width: 100%;
-    }
-
-    .menu-togle {
-        display: block;
-        background-color: #F1B814;
-        border: none;
-        font-size: 1.5em;
-        cursor: pointer;
-    }
-    
-    .button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-        padding-top: 1.25rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-        padding-bottom: 1.25rem;
-
-    }
-
-    .hero-image {
-        width: 100%;
-        height: auto; /* conversor: https://nekocalc.com/es/px-a-rem-conversor */
-    }
-
-    .categories {
-        background-color: rgba(217, 217, 217, 0.2);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-box h2 {
-        font-size: 1.2rem;
-    }
-
-    .search-box {
-        max-width: 90%;
-    }
-
-    .best-sellers h2 {
-        font-size: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 
     .grid-item {
-        width: 18rem;
         height: auto;
     }
 
-    .grid-container {
-        grid-template-columns: 1fr;  /*1 columna */
+    /* Estilos les Plus Recommandés */
+
+    /* Ver COMO HACER ESTA PARTE, NO ME FUNCIONA */
+
+    /* Estilo Top Clientes */
+
+    /* Estilo Newsletter */
+
+    /* Estilo Footer */
+
+    /* Estilo Countries */
+
+
+
+}
+
+
+/* Tablets (768px - 1080) */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    header {
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814; 
+        padding: 10px 20px;
     }
+
+    .logo {
+        padding-bottom: 15px;
+    }
+
+    /* Estilos de la sección hero */  
+     
+    .hero {
+        flex-direction: column; /* modificado */
+        text-align: center; /* modificado */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* modificado */
+        padding-top: 2.5rem; /* modificado */
+    } 
+
+    .hero-text p {
+        font-size: 1.2rem; /* modificado */
+        padding-bottom: 2.5rem; /* modificado */
+
+    }
+
+    .hero-image { 
+        width: 100%; /* modificado */
+        height: 20rem; /* modificado */
+    }
+
+    .search-box {
+        padding: 1rem; /* modificado */
+        max-width: 100%; /* modificado */
+        background-color: #F1B814; /* modificado */
+        margin: 0; /* modificado */
+        display: flex; /* modificado */
+        flex-wrap: wrap; /* modificado */
+        justify-content: center; /* modificado */
+        align-items: center; /* modificado */
+    }
+    
+    .search-box h2 {
+        margin: 0; /* modificado */
+    }
+    
+    .search-box form {
+        flex-direction: row; /* modificado */
+        gap: 0.75rem; /* modificado */
+    }
+    
+    .search-box form button {
+        background-color: #BD1E51; 
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+     /* Estilos de mejores ventas */  
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .grid-item {
+        height: auto;
+    }
+
+    /* Estilo Top Clientes */
+
+    /* Estilo Newsletter */
+
+    /* Estilo Footer */
+
+    /* Estilo Countries */
+
+
+}
+
+/* laptops (1024px and 1280) */
+@media screen and (min-width: 1081px) and (max-width: 1280px){
+
+    nav ul li a {
+        font-size: 18px;
+        
+    }
+
+    /* Estilos de mejores ventas */  
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .grid-item {
+        height: auto;
+    }
+
+    /* Estilo Top Clientes */
+
+    /* Estilo Newsletter */
+
+    /* Estilo Footer */
+
+    /* Estilo Countries */
+
+
 }
