@@ -346,14 +346,24 @@ nav ul li a .heart {
     background-color: #BD1E51;
 }
 
-/* Estilo recommendations */
+/* Estilo Featured */
+
+.container-featured-books {
+    display: none;
+}
 
 .featured-books {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 1.25rem;
     background-color: #fff;
+}
+
+.featured-book, .featured-book-info {
+    flex: 1 1 100%; /* Ajuste para crear dos columnas */
+    margin: 10px;
 }
 
 .featured-book {
@@ -364,8 +374,8 @@ nav ul li a .heart {
 }
 
 .featured-book img {
-    max-width: 15rem;
-    height: 20rem;
+    max-width: 10rem;
+    height: 15rem;
     border: 5px solid #F1B814;
     background-size: cover;
 }
@@ -478,10 +488,11 @@ nav ul li a .heart {
     color: #001730;
     margin: auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .newsletter h2 {
@@ -494,20 +505,38 @@ nav ul li a .heart {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    align-items: flex-end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 10px;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: medium;
 }
 
 .newsletter form input,
 .newsletter form button {
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #D9D9D9;
+    border-radius: 8px;
     font-size: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #001730;
+    width: 12.5rem;
+    box-sizing: border-box;
 }
 
 .newsletter form input {
     font-weight: lighter;
+    margin-bottom: 10px;
 }
 
 .newsletter form button {
@@ -515,37 +544,177 @@ nav ul li a .heart {
     color: white;
     border: none;
     cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    flex: 1;
+    max-width: 12.5rem;
 }
 
 
 /* Estilo Footer */
 
-.footer {
-    list-style: none;
+footer {
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
-.footer li {
+.footer-section {
+    flex: 1;
     margin: 0 10px;
 }
 
-.footer li a {
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
     text-decoration: none;
     color: #001730;
     font-size: 20px;
     font-weight: medium;
-    padding: 5px 10px;
+    
 }
 
-.footer-socials {
+.contact-us {
+    text-align: center;
+}
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Estilo Countries */
+
+.countries-section {
+    background-color: #F1B814;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.countries-section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+
+.countries-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.countries-section ul li {
+    margin: 0;
+}
+
+.countries-section ul li a {
+    text-decoration: none;
+    color: #001730;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+/* PRUEBA */
+
+/* Estilo Top Clientes */
+
+.top-clients1 {
+    margin-left: 1.5rem;
+}
+
+.client-item1 {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    background-color: white;
+    margin: 20px 30px;
+    padding: 20px;
+    align-items: center;
+}
+
+.client-item1 img {
+    width: 150px;
+    height: 250px;
+    border: 5px solid #F1B814;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.client-details1 {
+    display: flex;
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    justify-content: space-between; /* Distribute space between elements */
+}
+
+.client-header1 {
+    margin-bottom: 10px;
+}
+
+.client-details1 h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.client-details1 p {
+    font-size: 1rem;
+    margin: 0;
+    color: #001730;
+    padding-left: 15px;
+}
+
+.client-details1 .rating {
+    color: #FFD700;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.client-details1 .description {
+    margin-bottom: 20px;
+    color: #001730;
+    flex-grow: 1;
+}
+
+.client-details1 button {
+    background-color: #BD1E51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin: auto;
+}
+
+.client-details1 button:hover {
+    background-color: #a11a42;
+}
 
 
 
@@ -647,6 +816,10 @@ nav ul {
 
 /* Estilos Libros recomendados */
 
+.container-featured-books {
+    display: none;
+}
+
 .featured-books {
     flex-direction: column;
     padding: 10px;
@@ -730,28 +903,24 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
 /* Estilo Footer */
 
-.footer {
-    list-style: none;
-    display: flex;
+footer {
     flex-direction: column;
     align-items: start;
     margin: 15px;
     padding: 0;
 }
 
-/* Estilo Countries */
-
-
 }
 
 /* Small Phones (x to 480px) */
-@media screen and (min-width: 353px) and (max-width: 480px){
+@media screen and (min-width: 353px) and (max-width: 767px){
 
-    /* Estilos de la sección menú de navegación + logo */
+/* Estilos de la sección menú de navegación + logo */
 
 header {
     display: flex;
@@ -792,7 +961,7 @@ nav ul {
     height: auto;
 }
 
-    /* Estilos de la sección hero */
+/* Estilos de la sección hero */
 
 .hero {
     display: flex;
@@ -827,14 +996,14 @@ nav ul {
     cursor: pointer;
 }
 
-    /* Estilos Categories */
+/* Estilos Categories */
 
 .categories {
     background-color: rgba(217, 217, 217, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    /* Estilos de mejores ventas */  
+/* Estilos de mejores ventas */  
 
 .grid-container {
     grid-template-columns: repeat(1, 1fr);
@@ -845,7 +1014,7 @@ nav ul {
     height: auto;
 }
 
-    /* Estilos Libros recomendados */
+/* Estilos Libros recomendados */
 
 .featured-books {
     flex-direction: column;
@@ -863,7 +1032,11 @@ nav ul {
     width: 18rem;
 }
 
-    /* Estilo Top Clientes */
+.container-featured-books {
+    display: none;
+}
+
+/* Estilos Top Clientes */
 
 .client-item {
     display: flex;
@@ -931,151 +1104,24 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
 /* Estilo Footer */
 
-.footer {
+footer {
     flex-direction: column;
     align-items: start;
-    margin: 15px;
-}
-
-.footer-socials {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin: 1.25rem;
-
-}
-
-/* Estilo Countries */
-
-}
-
-
-/* Phones (480px and 768) */
-@media screen and (min-width: 481px) and (max-width: 768px){
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #F1B814; 
-    padding: 10px 20px;
-}
-    
-    
-.logo {
-    width: 32rem; /*26.82 vw es el equivalente a 515px*/
-    max-width: 515px;
-    height: auto;
-    background-color: #F1B814;
-    padding-bottom: 15px;
-}
-    
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
     padding: 0;
 }
-    
-nav ul li {
-    margin: 0 10px;
-}
-    
-nav ul li a {
-    text-decoration: none;
-    color: #001730;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-    
-nav ul li a .heart {
-    color: red;
-}
-    
-.button {
-    background-color: white;
-    color: #001730;
-    border-radius: 20px;
-    border: 1px solid #D9D9D9;
-    transition: background-color 0.3s, color 0.3s;
-}
-    
-.button:hover {
-    background-color: #f0f0f0;
-    color: #001730;
-}
-
-    /* Estilos de la sección hero */  
-
-.hero {
-    flex-direction: column;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 2rem;
-    padding-top: 2.5rem;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    padding-bottom: 2.5rem;
-
-}
-
-.hero-image {
-    width: 100%;
-    height: 20rem;
-}
-
-.search-box {
-    max-width: 100%;
-    background-color: #F1B814;
-}
-
-.search-box form {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-    /* Estilos de mejores ventas */  
-
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
-
-    .grid-item {
-        height: auto;
-    }
-
-    /* Estilos les Plus Recommandés */
-
-    /* Ver COMO HACER ESTA PARTE, NO ME FUNCIONA */
-
-    /* Estilo Top Clientes */
-
-    /* Estilo Newsletter */
-
-    /* Estilo Footer */
-
-    /* Estilo Countries */
-
 
 
 }
 
 
-/* Tablets (768px - 1080) */
-@media screen and (min-width: 769px) and (max-width: 1024px){
+/* Tablets (768px - 1024) */
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
     header {
         justify-content: center;
@@ -1131,17 +1177,81 @@ nav ul li a .heart {
         gap: 0.75rem; /* modificado */
     }
     
-    .search-box form button {
-        background-color: #BD1E51; 
-        color: white;
+
+    /* Estilos recomendaciones = Featured books */
+
+    .featured-books {
+        display: none;
+    }
+
+    .container-featured-books {
+        display: contents;
+    }
+
+    .book-section-1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #fff;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-section-2 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: #fff;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book {
+        display: flex;
+        align-items: center;
+    }
+    
+    .book img {
+        width: 150px;
+        height: 250px;
+        margin: 0;
+        border-radius: 8px;
+        border: 5px solid #F1B814;
+    }
+    
+    .book-info {
+        width: 35rem;
+        background-color: rgba(217, 217, 217, 0.2);
+        padding: 1.25rem;
+    }
+    
+    .book-info h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .book-info button {
+        background-color: #bf0a30;
+        color: #fff;
         border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
         cursor: pointer;
+    }
+    
+    .book-info button:hover {
+        background-color: #9a0826;
     }
 
      /* Estilos de mejores ventas */  
 
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
 
@@ -1149,19 +1259,21 @@ nav ul li a .heart {
         height: auto;
     }
 
-    /* Estilo Top Clientes */
-
-    /* Estilo Newsletter */
-
-    /* Estilo Footer */
-
-    /* Estilo Countries */
-
-
 }
 
 /* laptops (1024px and 1280) */
-@media screen and (min-width: 1081px) and (max-width: 1280px){
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+
+    header {
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814; 
+        padding: 10px 20px;
+    }
+
+    .logo {
+        padding-bottom: 15px;
+    }
 
     nav ul li a {
         font-size: 18px;
@@ -1179,13 +1291,10 @@ nav ul li a .heart {
         height: auto;
     }
 
-    /* Estilo Top Clientes */
+    /* Estilo Featured books */
 
-    /* Estilo Newsletter */
-
-    /* Estilo Footer */
-
-    /* Estilo Countries */
-
+    .container-featured-books {
+        display: none;
+    }
 
 }
