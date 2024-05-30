@@ -7,7 +7,8 @@ body {
 
 h2 {
     font-family: "Libre Baskerville";
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #001730;
     margin-left: auto;
 }
@@ -17,6 +18,14 @@ button {
     font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: medium;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* header: logo + menu*/
@@ -40,7 +49,7 @@ header {
 }
 
 .logo {
-    width: 32rem; /*26.82 vw es el equivalente a 515px*/
+    width: 32rem;
     max-width: 515px;
     height: auto;
 }
@@ -83,14 +92,15 @@ nav ul li a .heart {
     color: #001730;
 }
 
-/* */
+/* General Main */
 
 .container {
     display: flex;
     margin: 20px;
 }
 
-.left-section, .right-section {
+.left-section,
+.right-section {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -104,37 +114,157 @@ nav ul li a .heart {
 
 .right-section {
     flex: 2;
+    background-color: rgba(217, 217, 217, 0.5);
 }
 
-.section {
-    margin-bottom: 20px;
-}
+/* Estilos Login*/
 
 .section h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.section input, .discount-code input {
-    width: 100%;
+.section h2 .number,
+.signup-section h2 .number,
+.payment-section h2 .number {
+    background-color: #f1c40f;
+    border-radius: 50%;
+    color: #001730;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 8px;
+    text-align: center;
+    width: 24px;
+    padding: 5px;
+}
+
+.login-form {
+    display: flex;
+    gap: 10px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    flex: 1;
 }
 
-.section button, .discount-code button {
-    background-color: #c82a49;
-    color: white;
+.login-form .login-button {
+    background-color: #BD1E51;
+    color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.section button:hover, .discount-code button:hover {
-    background-color: #a02038;
+.login-form .login-button:hover {
+    background-color: #a5281a;
 }
+
+
+/* Estilo crear cuenta + adresse */
+
+.signup-section {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.signup-section h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.signup-form .signup-button {
+    background-color: #BD1E51;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup-form .signup-button:hover {
+    background-color: #a5281a;
+}
+
+/* Estilos Payments*/
+
+.payment-section {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.payment-section h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.card-details {
+    display: flex;
+    gap: 10px;
+}
+
+.card-details input[type="text"] {
+    flex: 1;
+}
+
+.payment-form .payment-button {
+    background-color: #BD1E51;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.payment-form .payment-button:hover {
+    background-color: #a5281a;
+}
+
+/* Estilos Panier Section */
 
 .card-details {
     display: flex;
@@ -146,52 +276,152 @@ nav ul li a .heart {
 }
 
 .right-section h2 {
-    font-size: 1.5em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .cart-item {
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
 }
 
 .cart-item img {
-    width: 50px;
-    height: 75px;
+    width: 120px;
+    height: auto;
     margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
 }
 
 .item-details p {
     margin: 0;
 }
 
+.title {
+    font-weight: medium;
+    margin-bottom: 5px;
+}
+
+.author,
+.condition {
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.price-quantity p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.price-quantity .price::before {
+    content: "Prix:";
+    font-weight: medium;
+}
+
+.price-quantity .quantity::before {
+    content: "Quantity:";
+    font-weight: medium;
+}
+
+.cart-item .trash-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.line {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+/* Summary */
+
 .summary {
     margin-top: 20px;
+    display: flex;
+    /* añadido */
+    flex-direction: column;
+    /* añadido */
+    align-items: stretch;
+    /* añadido */
 }
 
 .summary p {
+    font-weight: normal;
+    display: flex;
+    /* añadido */
+    justify-content: space-between;
+    /* añadido */
+    margin: 0;
+    /* añadido */
+}
+
+.summary .sous-total::before {
+    content: "Sous-Total:";
+    font-weight: medium;
+}
+
+.summary .livraison::before {
+    content: "Livraison À Domicile:";
+    font-weight: medium;
+}
+
+.summary .total::before {
+    content: "Total";
     font-weight: bold;
 }
 
 .discount-code {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin: 10px 0;
+    width: 100%;
 }
 
 .discount-code input {
     flex: 1;
     margin-right: 10px;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
 }
 
-.discount-code button {
+.summary .discount-code button {
     padding: 10px;
+    width: 40%;
+    background-color: #F1B814;
+    color: #001730;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .summary button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #c82a49;
+    background-color: #BD1E51;
     color: white;
     border: none;
     border-radius: 5px;
@@ -200,6 +430,36 @@ nav ul li a .heart {
 
 .summary button:hover {
     background-color: #a02038;
+}
+
+/* Promo section */
+
+.promo-section {
+    max-width: 100%;
+    background-color: #F1B814;
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+/* Faq section */
+
+.faq-section {
+    max-width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 2rem;
+}
+
+/* Yellow line Section*/
+
+.yellow-line {
+    background-color: #F1B814;
+    max-width: 100%;
+    padding: 0.5rem;
+
 }
 
 /* Estilo Footer */
@@ -231,7 +491,7 @@ footer {
     color: #001730;
     font-size: 20px;
     font-weight: medium;
-    
+
 }
 
 .contact-us {
@@ -257,7 +517,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+
 }
 
 .countries-section h2 {
@@ -286,5 +546,165 @@ footer {
     color: #001730;
     font-size: 14px;
     font-weight: bold;
-    
+
+}
+
+/* Media queries para tabletas y móviles */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+
+    header {
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        padding-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        /* Coloca la sección derecha encima de la izquierda */
+        margin: 10px;
+    }
+
+    .left-section,
+    .right-section {
+        margin: 10px 0;
+    }
+
+    .promo-section {
+        font-size: 20px;
+    }
+
+    .faq-section {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    header {
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        padding-bottom: 15px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        /* Asegura que la sección derecha esté encima en pantallas más pequeñas */
+        margin: 5px;
+    }
+
+    .left-section,
+    .right-section {
+        margin: 5px 0;
+        padding: 15px;
+    }
+
+    .promo-section {
+        font-size: 20px;
+    }
+
+    .faq-section {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+
+    /* Estilo Menu */
+
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .menu-togle {
+        display: block;
+        background-color: #F1B814;
+        /* CAMBIAR EL DISEÑO DEL TOGGLE */
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 20rem;
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* Estilo container */
+
+    .container {
+        flex-direction: column-reverse;
+        /* Asegura que la sección derecha esté encima en pantallas más pequeñas */
+        margin: 0;
+    }
+
+    .left-section,
+    .right-section {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .login-form {
+        flex-direction: column;
+    }
+
+    .card-details input[type="text"] {
+        width: 100%;
+    }
+
+    .promo-section {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 1.25rem;
+    }
+
+    .faq-section {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    /* Estilo Footer */
+
+    footer {
+        flex-direction: column;
+        align-items: start;
+        margin: 1.25rem;
+        padding: 0;
+    }
 }

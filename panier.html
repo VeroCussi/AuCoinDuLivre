@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,19 @@
     <link rel="stylesheet" href="panier.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <header>
         <!-- Nav menu -->
         <section class="logo-container">
             <img class="logo" src="./images/Logo.png" alt="Logo Au Coin du Livre">
-            
         </section>
         <nav>
             <ul>
@@ -29,110 +33,114 @@
         </nav>
     </header>
     <main>
-    <section class="container">
-        <div class="left-section">
-            <div class="section" id="login">
-                <h2><span class="number">1</span> Se connecter</h2>
-                <div class="login-form">
-                    <input type="email" placeholder="Votre email">
-                    <input type="password" placeholder="Votre mot de passe">
-                    <button class="login-button">Me connecter</button>
+        <section class="container">
+            <aside class="left-section">
+                <div class="section" id="login">
+                    <h2><span class="number">1</span> Se connecter</h2>
+                    <form class="login-form">
+                        <input type="email" placeholder="Votre email">
+                        <input type="password" placeholder="Votre mot de passe">
+                        <button class="login-button">Me connecter</button>
+                    </form>
+                    <div class="signup-section">
+                        <h2>Nouveau client ? S'inscrire</h2>
+                        <form class="signup-form">
+                            <input type="text" placeholder="Nom">
+                            <input type="text" placeholder="Prénom">
+                            <input type="email" placeholder="e-mail">
+                            <input type="password" placeholder="Mot de passe">
+                            <button class="signup-button">M’inscrire</button>
+                        </form>
+                    </div>
                 </div>
+
                 <div class="signup-section">
-                    <h2>Nouveau client ? S'inscrire</h2>
-                    <div class="signup-form">
+                    <h2><span class="number">2</span>Où souhaitez-vous le recevoir ?</h2>
+                    <form class="signup-form">
                         <input type="text" placeholder="Nom">
                         <input type="text" placeholder="Prénom">
-                        <input type="email" placeholder="e-mail">
-                        <input type="password" placeholder="Mot de passe">
-                        <button class="signup-button">M’inscrire</button>
+                        <input type="text" placeholder="Adresse">
+                        <input type="text" placeholder="Telephone">
+                        <button class="signup-button">Enregistrer l'adresse</button>
+                    </form>
+                </div>
+
+                <div class="payment-section">
+                    <h2><span class="number">3</span> Comment souhaitez-vous payer ?</h2>
+                    <h4>Carte bancaire</h4>
+                    <form class="payment-form">
+                        <input type="text" placeholder="Numéro de carte">
+                        <input type="text" placeholder="Titulaire de la carte">
+                        <div class="card-details">
+                            <input type="text" placeholder="Mois">
+                            <input type="text" placeholder="Année">
+                            <input type="text" placeholder="CVV">
+                        </div>
+                        <button class="payment-button">Payer</button>
+                    </form>
+                </div>
+            </aside>
+            <!-- Right Section "PANIER"-->
+            <section class="right-section">
+                <h2>Mon Panier</h2>
+                <article class="cart-item">
+                    <img src="./images/couvertures-livres/avoir-le-courage-de-ne-pas-etreaime.webp"
+                        alt="Avoir le courage de ne pas être aimé">
+                    <div class="item-details">
+                        <p class="title">Avoir le courage de ne pas être aimé</p>
+                        <p class="author">Eichiro Kishimi</p>
+                        <p class="condition">Livre Neuf</p>
+                        <div class="price-quantity">
+                            <p class="price">12,34 €</p>
+                            <p class="quantity">1</p>
+                        </div>
                     </div>
-                </div>  
-            </div>
-
-            <div class="signup-section">
-                <h2><span class="number">2</span>Où souhaitez-vous le recevoir ?</h2>
-                <div class="signup-form">
-                    <input type="text" placeholder="Nom">
-                    <input type="text" placeholder="Prénom">
-                    <input type="text" placeholder="Adresse">
-                    <input type="text" placeholder="Telephone">
-                    <button class="signup-button">Enregistrer l'adresse</button>
-                </div>
-            </div>
-
-            <div class="payment-section">
-                <h2><span class="number">3</span> Comment souhaitez-vous payer ?</h2>
-                <h4>Carte bancaire</h4>
-                <div class="payment-form">
-                    <input type="text" placeholder="Numéro de carte">
-                    <input type="text" placeholder="Titulaire de la carte">
-                    <div class="card-details">
-                        <input type="text" placeholder="Mois">
-                        <input type="text" placeholder="Année">
-                        <input type="text" placeholder="CVV">
+                    <img class="trash-icon" src="./images/icon-trash.png" alt="Trash Icon">
+                </article>
+                <div class="line"></div>
+                <article class="cart-item">
+                    <img src="./images/couvertures-livres/one-piece.webp" alt="One Piece Vol. 107">
+                    <div class="item-details">
+                        <p class="title">One Piece Vol. 107</p>
+                        <p class="author">Eichiro Oda</p>
+                        <p class="condition">Livre neuf</p>
+                        <div class="price-quantity">
+                            <p class="price">6,99 €</p>
+                            <p class="quantity">1</p>
+                        </div>
                     </div>
-                    <button class="payment-button">Payer</button>
+                    <img class="trash-icon" src="./images/icon-trash.png" alt="Trash Icon">
+                </article>
+                <div class="summary">
+                    <p class="sous-total">19,33 €</p>
+                    <p class="livraison">GRATUITE</p>
+                    <p>Avez-vous un code de réduction?</p>
+                    <div class="discount-code">
+                        <input type="text" placeholder="Code de réduction">
+                        <button>APPLIQUER</button>
+                    </div>
+                    <p class="total">19,33 €</p>
+                    <button>VALIDER VOTRE PANIER</button>
                 </div>
-            </div>
-        </div>
-    <!-- Right Section "PANIER"-->  
-        <div class="right-section">
-            <h2>Mon Panier</h2>
-            <div class="cart-item">
-                <img src="./images/couvertures-livres/avoir-le-courage-de-ne-pas-etreaime.webp" alt="Avoir le courage de ne pas être aimé">
-                <div class="item-details">
-                    <p class="title">Avoir le courage de ne pas être aimé</p>
-                    <p class="author">Eichiro Kishimi</p>
-                    <p class="condition">Livre Neuf</p>
-                    <div class="price-quantity">
-                    <p class="price">Prix: 12,34 €</p>
-                    <p class="quantity">Quantity: 1</p>
-                </div>
-                </div>
-                <img class="trash-icon" src="./images/icon-trash.png" alt="Trash Icon">
-            </div>
-            <div class="line"></div>
-            <div class="cart-item">
-                <img src="./images/couvertures-livres/one-piece.webp" alt="One Piece Vol. 107">
-                <div class="item-details">
-                    <p>One Piece Vol. 107</p>
-                    <p>Eichiro Oda</p>
-                    <p>Livre neuf</p>
-                    <p>Prix: 6,99 €</p>
-                    <p>Quantity: 1</p>
-                </div>
-            </div>
-            <div class="summary">
-                <p>Sous-Total: 19,33 €</p>
-                <p>Livraison À Domicile: GRATUITE</p>
-                <p>Avez-vous un code de réduction?</p>
-                <div class="discount-code">
-                    <input type="text" placeholder="Code de réduction">
-                    <button>APPLIQUER</button>
-                </div>
-                <p>Total: 19,33 €</p>
-                <button>VALIDER VOTRE PANIER</button>
-            </div>
-        </div>
-    </section>
+            </section>
+        </section>
 
-    <section class="promo-section">
-        <p>Merci pour votre achat ! <br>
-            Cliquez ici pour obtenir une réduction exclusive de 10% sur votre prochaine commande.</p>
-    </section>
+        <section class="promo-section">
+            <p>Merci pour votre achat ! <br>
+                Cliquez ici pour obtenir une réduction exclusive de 10% sur votre prochaine commande.</p>
+        </section>
 
-    <section class="faq-section">
-        <h3>Faq</h3>
-        <p>N'hesitez pas à consulter nos faq vous y trouverez peut-être la réponse à votre question, sinon, laissez-nous un message sur ce formulaire.<br>Consulter nos faq.</p>
+        <section class="faq-section">
+            <h3>Faq</h3>
+            <p>N'hesitez pas à consulter nos faq vous y trouverez peut-être la réponse à votre question, sinon,
+                laissez-nous un message sur ce formulaire.<br>Consulter nos faq.</p>
+        </section>
 
-    </section>
-
-    <section class="yellow-line"></section>
+        <section class="yellow-line"></section>
 
     </main>
-     <!-- Footer section -->
-     <footer>
+    <!-- Footer section -->
+    <footer>
         <section class="footer-section">
             <ul>
                 <li><a href="#Qui sommes-nous">Qui sommes-nous</a></li>
@@ -157,29 +165,27 @@
                 <li><a href="#Accessibilité">Accessibilité</a></li>
             </ul>
         </section>
-            <article class="footer-section contact-us">
-                <h3>Contactez-nous</h2>
+        <section class="footer-section contact-us">
+            <h3>Contactez-nous</h2>
                 <div class="social-icons">
                     <a href="#"></a><img src="./images/icons-socials/instagram.png" alt="Instagram">
                     <a href="#"></a><img src="./images/icons-socials/youtube.png" alt="Youtube">
                     <a href="#"></a><img src="./images/icons-socials/facebook.png" alt="Facebook">
                     <a href="#"></a><img src="./images/icons-socials/linkedin.png" alt="Linkedin">
-                </div> 
-            </article>
+                </div>
+        </section>
     </footer>
 
-        <!-- Countries section -->
-        <section class="countries-section">
-            <h2>Trouvez des livres neufs et d'occasion</h2>
-            <ul>
-                <li><a href="#France">France</a></li>
-                <li><a href="#Espagne">Espagne</a></li>
-                <li><a href="#Italie">Italie</a></li>
-                <li><a href="#Angleterre">Angleterre</a></li>
-                <li><a href="#Belgique">Belgique</a></li>
-            </ul>
-            
-        </section>
-
+    <!-- Countries section -->
+    <section class="countries-section">
+        <h2>Trouvez des livres neufs et d'occasion</h2>
+        <ul>
+            <li><a href="#France">France</a></li>
+            <li><a href="#Espagne">Espagne</a></li>
+            <li><a href="#Italie">Italie</a></li>
+            <li><a href="#Angleterre">Angleterre</a></li>
+            <li><a href="#Belgique">Belgique</a></li>
+        </ul>
+    </section>
 </body>
 </html>
