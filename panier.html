@@ -28,62 +28,85 @@
             <button class="menu-togle">&#9776;</button>
         </nav>
     </header>
-
-    <div class="container">
+    <main>
+    <section class="container">
         <div class="left-section">
             <div class="section" id="login">
-                <h2>1 Se connecter</h2>
-                <input type="email" placeholder="Votre email">
-                <input type="password" placeholder="Votre mot de passe">
-                <button>Me connecter</button>
-                <h3>Nouveau client ? S'inscrire</h3>
-                <input type="text" placeholder="Nom">
-                <input type="text" placeholder="Prénom">
-                <input type="email" placeholder="e-mail">
-                <input type="password" placeholder="Mot de passe">
-                <button>M’inscrire</button>
-            </div>
-            <div class="section" id="address">
-                <h2>2 Où souhaitez-vous le recevoir ?</h2>
-                <input type="text" placeholder="Nom">
-                <input type="text" placeholder="Prénom">
-                <input type="text" placeholder="Adresse">
-                <input type="text" placeholder="Téléphone">
-                <button>Enregistrer l'adresse</button>
-            </div>
-            <div class="section" id="payment">
-                <h2>3 Comment souhaitez-vous payer ?</h2>
-                <input type="text" placeholder="Numéro de carte">
-                <input type="text" placeholder="Titulaire de la carte">
-                <div class="card-details">
-                    <input type="text" placeholder="Mois">
-                    <input type="text" placeholder="Année">
-                    <input type="text" placeholder="CVV">
+                <h2><span class="number">1</span> Se connecter</h2>
+                <div class="login-form">
+                    <input type="email" placeholder="Votre email">
+                    <input type="password" placeholder="Votre mot de passe">
+                    <button class="login-button">Me connecter</button>
                 </div>
-                <button>Payer</button>
+                <div class="signup-section">
+                    <h2>Nouveau client ? S'inscrire</h2>
+                    <div class="signup-form">
+                        <input type="text" placeholder="Nom">
+                        <input type="text" placeholder="Prénom">
+                        <input type="email" placeholder="e-mail">
+                        <input type="password" placeholder="Mot de passe">
+                        <button class="signup-button">M’inscrire</button>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="signup-section">
+                <h2><span class="number">2</span>Où souhaitez-vous le recevoir ?</h2>
+                <div class="signup-form">
+                    <input type="text" placeholder="Nom">
+                    <input type="text" placeholder="Prénom">
+                    <input type="text" placeholder="Adresse">
+                    <input type="text" placeholder="Telephone">
+                    <button class="signup-button">Enregistrer l'adresse</button>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h2><span class="number">3</span> Comment souhaitez-vous payer ?</h2>
+                <h4>Carte bancaire</h4>
+                <div class="payment-form">
+                    <input type="text" placeholder="Numéro de carte">
+                    <input type="text" placeholder="Titulaire de la carte">
+                    <div class="card-details">
+                        <input type="text" placeholder="Mois">
+                        <input type="text" placeholder="Année">
+                        <input type="text" placeholder="CVV">
+                    </div>
+                    <button class="payment-button">Payer</button>
+                </div>
             </div>
         </div>
+    <!-- Right Section "PANIER"-->  
         <div class="right-section">
             <h2>Mon Panier</h2>
             <div class="cart-item">
-                <img src="book1.jpg" alt="Avoir le courage de ne pas être aimé">
+                <img src="./images/couvertures-livres/avoir-le-courage-de-ne-pas-etreaime.webp" alt="Avoir le courage de ne pas être aimé">
                 <div class="item-details">
-                    <p>Avoir le courage de ne pas être aimé</p>
-                    <p>12,34 €</p>
-                    <p>Quantity: 1</p>
+                    <p class="title">Avoir le courage de ne pas être aimé</p>
+                    <p class="author">Eichiro Kishimi</p>
+                    <p class="condition">Livre Neuf</p>
+                    <div class="price-quantity">
+                    <p class="price">Prix: 12,34 €</p>
+                    <p class="quantity">Quantity: 1</p>
                 </div>
+                </div>
+                <img class="trash-icon" src="./images/icon-trash.png" alt="Trash Icon">
             </div>
+            <div class="line"></div>
             <div class="cart-item">
-                <img src="book2.jpg" alt="One Piece Vol. 107">
+                <img src="./images/couvertures-livres/one-piece.webp" alt="One Piece Vol. 107">
                 <div class="item-details">
                     <p>One Piece Vol. 107</p>
-                    <p>6,99 €</p>
+                    <p>Eichiro Oda</p>
+                    <p>Livre neuf</p>
+                    <p>Prix: 6,99 €</p>
                     <p>Quantity: 1</p>
                 </div>
             </div>
             <div class="summary">
                 <p>Sous-Total: 19,33 €</p>
                 <p>Livraison À Domicile: GRATUITE</p>
+                <p>Avez-vous un code de réduction?</p>
                 <div class="discount-code">
                     <input type="text" placeholder="Code de réduction">
                     <button>APPLIQUER</button>
@@ -92,8 +115,22 @@
                 <button>VALIDER VOTRE PANIER</button>
             </div>
         </div>
-    </div>
+    </section>
 
+    <section class="promo-section">
+        <p>Merci pour votre achat ! <br>
+            Cliquez ici pour obtenir une réduction exclusive de 10% sur votre prochaine commande.</p>
+    </section>
+
+    <section class="faq-section">
+        <h3>Faq</h3>
+        <p>N'hesitez pas à consulter nos faq vous y trouverez peut-être la réponse à votre question, sinon, laissez-nous un message sur ce formulaire.<br>Consulter nos faq.</p>
+
+    </section>
+
+    <section class="yellow-line"></section>
+
+    </main>
      <!-- Footer section -->
      <footer>
         <section class="footer-section">
