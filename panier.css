@@ -24,11 +24,11 @@ button {
 input {
     font-family: "montserrat", sans-serif;
     font-size: 16px;
-    font-weight: medium;
+    font-weight: normal;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* header: logo + menu*/
+/* header: logo + menu */
 
 header {
     display: flex;
@@ -117,7 +117,7 @@ nav ul li a .heart {
     background-color: rgba(217, 217, 217, 0.5);
 }
 
-/* Estilos Login*/
+/* Styles Login*/
 
 .section h2 {
     display: flex;
@@ -127,7 +127,7 @@ nav ul li a .heart {
 .section h2 .number,
 .signup-section h2 .number,
 .payment-section h2 .number {
-    background-color: #f1c40f;
+    background-color: #F1B814;
     border-radius: 50%;
     color: #001730;
     display: inline-block;
@@ -147,7 +147,7 @@ nav ul li a .heart {
 .login-form input[type="email"],
 .login-form input[type="password"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #D9D9D9;
     border-radius: 8px;
     flex: 1;
 }
@@ -162,11 +162,11 @@ nav ul li a .heart {
 }
 
 .login-form .login-button:hover {
-    background-color: #a5281a;
+    background-color: #a11a42;
 }
 
 
-/* Estilo crear cuenta + adresse */
+/* Styles Mon Compte + Adresse */
 
 .signup-section {
     max-width: 100%;
@@ -189,7 +189,7 @@ nav ul li a .heart {
 .signup-form input[type="email"],
 .signup-form input[type="password"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #D9D9D9;
     border-radius: 8px;
     font-size: 1em;
 }
@@ -206,10 +206,10 @@ nav ul li a .heart {
 }
 
 .signup-form .signup-button:hover {
-    background-color: #a5281a;
+    background-color: #a11a42;
 }
 
-/* Estilos Payments*/
+/* Styles Payments*/
 
 .payment-section {
     max-width: 100%;
@@ -235,7 +235,7 @@ nav ul li a .heart {
 
 .payment-form input[type="text"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #D9D9D9;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -261,10 +261,10 @@ nav ul li a .heart {
 }
 
 .payment-form .payment-button:hover {
-    background-color: #a5281a;
+    background-color: #a11a42;
 }
 
-/* Estilos Panier Section */
+/* Styles Panier Section */
 
 .card-details {
     display: flex;
@@ -285,7 +285,7 @@ nav ul li a .heart {
     align-items: center;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #D9D9D9;
     border-radius: 5px;
     position: relative;
 }
@@ -305,7 +305,7 @@ nav ul li a .heart {
 }
 
 .title {
-    font-weight: medium;
+    font-weight: normal;
     margin-bottom: 5px;
 }
 
@@ -329,12 +329,12 @@ nav ul li a .heart {
 
 .price-quantity .price::before {
     content: "Prix:";
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .price-quantity .quantity::before {
     content: "Quantity:";
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .cart-item .trash-icon {
@@ -352,36 +352,30 @@ nav ul li a .heart {
     margin: 10px 0;
 }
 
-/* Summary */
+/* Styles Summary */
 
 .summary {
     margin-top: 20px;
     display: flex;
-    /* añadido */
     flex-direction: column;
-    /* añadido */
     align-items: stretch;
-    /* añadido */
 }
 
 .summary p {
     font-weight: normal;
     display: flex;
-    /* añadido */
     justify-content: space-between;
-    /* añadido */
     margin: 0;
-    /* añadido */
 }
 
 .summary .sous-total::before {
     content: "Sous-Total:";
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .summary .livraison::before {
     content: "Livraison À Domicile:";
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .summary .total::before {
@@ -402,7 +396,7 @@ nav ul li a .heart {
     margin-right: 10px;
     padding: 10px;
     width: 60%;
-    border: 1px solid #ccc;
+    border: 1px solid #D9D9D9;
     border-radius: 8px;
     font-size: 1em;
 }
@@ -417,6 +411,10 @@ nav ul li a .heart {
     font-size: 1rem;
 }
 
+.discount-code button:hover {
+    background-color: #D9D9D9;
+}
+
 .summary button {
     width: 100%;
     padding: 10px;
@@ -429,7 +427,7 @@ nav ul li a .heart {
 }
 
 .summary button:hover {
-    background-color: #a02038;
+    background-color: #a11a42;
 }
 
 /* Promo section */
@@ -462,7 +460,7 @@ nav ul li a .heart {
 
 }
 
-/* Estilo Footer */
+/* Styles Footer */
 
 footer {
     display: flex;
@@ -490,7 +488,7 @@ footer {
     text-decoration: none;
     color: #001730;
     font-size: 20px;
-    font-weight: medium;
+    font-weight: normal;
 
 }
 
@@ -509,7 +507,7 @@ footer {
     height: 24px;
 }
 
-/* Estilo Countries */
+/* Styles Countries */
 
 .countries-section {
     background-color: #F1B814;
@@ -549,7 +547,8 @@ footer {
 
 }
 
-/* Media queries para tabletas y móviles */
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
 
     header {
@@ -565,12 +564,10 @@ footer {
 
     nav ul li a {
         font-size: 18px;
-
     }
 
     .container {
         flex-direction: column-reverse;
-        /* Coloca la sección derecha encima de la izquierda */
         margin: 10px;
     }
 
@@ -603,7 +600,6 @@ footer {
 
     .container {
         flex-direction: column-reverse;
-        /* Asegura que la sección derecha esté encima en pantallas más pequeñas */
         margin: 5px;
     }
 
@@ -624,7 +620,7 @@ footer {
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
 
-    /* Estilo Menu */
+    /* Styles Menu */
 
     header {
         display: flex;
@@ -644,7 +640,6 @@ footer {
     .menu-togle {
         display: block;
         background-color: #F1B814;
-        /* CAMBIAR EL DISEÑO DEL TOGGLE */
         border: none;
         font-size: 1.5em;
         cursor: pointer;
@@ -666,11 +661,10 @@ footer {
         height: auto;
     }
 
-    /* Estilo container */
+    /* Styles container */
 
     .container {
         flex-direction: column-reverse;
-        /* Asegura que la sección derecha esté encima en pantallas más pequeñas */
         margin: 0;
     }
 
@@ -699,7 +693,7 @@ footer {
         text-align: center;
     }
 
-    /* Estilo Footer */
+    /* Styles Footer */
 
     footer {
         flex-direction: column;

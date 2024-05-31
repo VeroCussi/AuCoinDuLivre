@@ -19,7 +19,7 @@ button {
     border-radius: 8px;
 }
 
-/* Estilos de la sección menú de navegación + logo */
+/* Styles section menu de navigation + logo */
 
 header {
     display: flex;
@@ -40,7 +40,7 @@ header {
 }
 
 .logo {
-    width: 32rem; /*26.82 vw es el equivalente a 515px*/
+    width: 32rem;
     max-width: 515px;
     height: auto;
 }
@@ -83,7 +83,7 @@ nav ul li a .heart {
     color: #001730;
 }
 
-/* Estilos de la sección hero */
+/* Styles section hero */
 
 .hero {
     display: flex;
@@ -106,7 +106,7 @@ nav ul li a .heart {
     display: flex;
     align-items: center;
     position: relative;
-    width: 69%; /* La imagen ocupa el 70% aprox */
+    width: 69%;
     background-image: url('./images/library.jpg');
     background-size: cover;
     background-position: center;
@@ -182,7 +182,7 @@ nav ul li a .heart {
     cursor: pointer;
 }
 
-/* Estilos de la sección categorías */
+/* Styles section catégories */
 
 .categories {
     display: flex;
@@ -221,7 +221,7 @@ nav ul li a .heart {
     font-weight: bold;
 }
 
-/* Estilos de la sección Meilleures Ventes */
+/* Styles section Meilleures Ventes */
 
 .best-sellers {
     padding: 1.25rem;
@@ -303,17 +303,17 @@ nav ul li a .heart {
 }
 
 .new-price {
-    background-color: #BD1E51; /* libros nuevos */
+    background-color: #BD1E51;
     color: white;
 
 }
 
 .used-price {
-    background-color: #F1B814; /* libros de ocasión */
+    background-color: #F1B814;
     color:#001730;
 }
 
-/* Estilo puntos carrusel */
+/* Styles carousel dots */
 
 .carousel {
     display: flex;
@@ -343,7 +343,7 @@ nav ul li a .heart {
     background-color: #BD1E51;
 }
 
-/* Estilo Featured */
+/* Styles Featured */
 
 .container-featured-books {
     display: none;
@@ -359,7 +359,7 @@ nav ul li a .heart {
 }
 
 .featured-book, .featured-book-info {
-    flex: 1 1 100%; /* Ajuste para crear dos columnas */
+    flex: 1 1 100%;
     margin: 10px;
 }
 
@@ -398,7 +398,7 @@ nav ul li a .heart {
     cursor: pointer;
 }
 
-/* Estilo Top Clientes */
+/* Styles Top Clients */
 
 .contenedor-grid {
     display: grid;
@@ -408,98 +408,93 @@ nav ul li a .heart {
         margin-left: 1.5rem;
     }
     
-    
-    /* Definicion del contenedor */
-    
-    .client-item {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
-        gap: 0;
-        background-color: white;
-        margin: 20px 30px;
-        padding: 20px;
-        align-items: center;
-        justify-content: end;
+.client-item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0;
+    background-color: white;
+    margin: 20px 30px;
+    padding: 20px;
+    align-items: center;
+    justify-content: end;
     }
     
-    /*Definicion de los items dentro del contenedor*/
-    
-    .client-item img {
-        grid-column: 1;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        width: 150px;
-        height: 250px;
-        border: 5px solid #F1B814;
-        border-radius: 8px;
-        background-size: cover;
+.client-item img {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 150px;
+    height: 250px;
+    border: 5px solid #F1B814;
+    border-radius: 8px;
+    background-size: cover;
     }
     
-    .client-item .client-details {
-        display: grid;
-        background-color: rgba(217, 217, 217, 0.2);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        min-height: 150px;
-        max-height: 220px;
+.client-item .client-details {
+    display: grid;
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-height: 150px;
+    max-height: 220px;
     }
-    .client-details .client-header {
-        grid-column: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        padding: 15px;
+.client-details .client-header {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 15px;
     }
-    .client-details .description {
-        grid-column: 3;
-        grid-row: 1;
-        padding: 15px;
+.client-details .description {
+    grid-column: 3;
+    grid-row: 1;
+    padding: 15px;
     }
-    .client-details .price-top {
-        grid-column: 3;
-        grid-row: 2;
-        padding: 10px;
+.client-details .price-top {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 10px;
     }
-    .client-header {
-        margin-bottom: 10px;
-    }
-    
-    .client-details h3 {
-        font-size: 1.5rem;
-        margin: 0;
+.client-header {
+    margin-bottom: 10px;
     }
     
-    .client-details p {
-        font-size: 1rem;
-        margin: 0;
-        color: #001730;
+.client-details h3 {
+    font-size: 1.5rem;
+    margin: 0;
     }
     
-    .client-details .rating {
-        color: #FFD700;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: left;
+.client-details p {
+    font-size: 1rem;
+    margin: 0;
+    color: #001730;
     }
     
-    .client-details .price-top {
-        background-color: #BD1E51;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        cursor: pointer;
-        margin: 0;
-        justify-self: end;
-        min-width: 200px;
+.client-details .rating {
+    color: #FFD700;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
     }
     
-    .client-details button:hover {
-        background-color: #a11a42;
+.client-details .price-top {
+    background-color: #BD1E51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0;
+    justify-self: end;
+    min-width: 200px;
+    }
+    
+.client-details button:hover {
+    background-color: #a11a42;
     }
 
 
-/* Estilo Newsletter */
+/* Styles Newsletter */
 
 .newsletter {
     max-width: 100%;
@@ -515,7 +510,7 @@ nav ul li a .heart {
 }
 
 .newsletter h2 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: "Libre Baskerville", serif;
     font-size: 1.5rem;
     margin: 0 0 20px 0;
 }
@@ -538,7 +533,7 @@ nav ul li a .heart {
 .input-group label {
     font-size: 1rem;
     margin-bottom: 5px;
-    font-weight: medium;
+    font-weight: normal;
 }
 
 .newsletter form input,
@@ -570,7 +565,7 @@ nav ul li a .heart {
 }
 
 
-/* Estilo Footer */
+/* Styles Footer */
 
 footer {
     display: flex;
@@ -598,8 +593,7 @@ footer {
     text-decoration: none;
     color: #001730;
     font-size: 20px;
-    font-weight: medium;
-    
+    font-weight: normal;
 }
 
 .contact-us {
@@ -617,7 +611,7 @@ footer {
     height: 24px;
 }
 
-/* Estilo Countries */
+/* Styles Countries */
 
 .countries-section {
     background-color: #F1B814;
@@ -625,7 +619,6 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
 }
 
 .countries-section h2 {
@@ -653,8 +646,7 @@ footer {
     text-decoration: none;
     color: #001730;
     font-size: 14px;
-    font-weight: bold;
-    
+    font-weight: bold;  
 }
 
 
@@ -679,15 +671,14 @@ h2 {
         
 .menu-togle {
     display: block;
-    background-color: #F1B814; /* CAMBIAR EL DISEÑO DEL TOGGLE */
+    background-color: #F1B814;
     border: none;
     font-size: 1.5em;
     cursor: pointer;
 }
     
 nav ul {
-    display: none;
-        
+    display: none;      
 }
         
 .logo-container {
@@ -701,7 +692,7 @@ nav ul {
     height: auto;
 }    
     
-/* Estilos de la sección hero */
+/* Styles section hero */
 
 .hero {
     display: flex;
@@ -710,22 +701,22 @@ nav ul {
 }
     
 .hero-image {
-    width: 100%; /* modificado*/
-    height: auto; /* modificado*/
-    padding-top: 10px; /* modificado*/
-    padding-bottom: 10px;/* modificado*/
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
     
 .hero-text h1 {
-    font-size: 2.6rem; /* modificado*/
+    font-size: 2.6rem;
 }
     
 .hero-text p {
-    font-size: 1.2rem; /* modificado*/
+    font-size: 1.2rem;
 }
     
 .search-box {
-    max-width: 100%; /* modificado*/
+    max-width: 100%;
 }
     
 .search-box form button {
@@ -735,14 +726,14 @@ nav ul {
     cursor: pointer;
 }
     
-/* Estilos Categories */
+/* Styles Categories */
     
 .categories {
     background-color: rgba(217, 217, 217, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de mejores ventas */ 
+/* Styles meilleures ventes */ 
 
 .grid-container {
     grid-template-columns: repeat(1, 1fr);
@@ -754,7 +745,7 @@ nav ul {
     height: auto;
 }
 
-/* Estilos Libros recomendados */
+/* Styles featured */
 
 .container-featured-books {
     display: none;
@@ -778,7 +769,7 @@ nav ul {
     width: 18rem;
 }
 
-/* Estilo Top Clientes */
+/* Styles Top Clients */
 
 .client-item {
     display: flex;
@@ -801,7 +792,7 @@ nav ul {
 
 
 .client-details p {
-    text-align: center; /* en la maqueta está a la izquierda, pero me gusta más centrado */
+    text-align: center;
 }
 
 .client-details button {
@@ -822,7 +813,7 @@ nav ul {
 }
   
 
-/* Estilo Newsletter */
+/* Styles Newsletter */
 
 .newsletter form {
     display: flex;
@@ -831,7 +822,7 @@ nav ul {
     align-items: center;
 }
 
-/* Estilo Footer */
+/* Styles Footer */
 
 footer {
     flex-direction: column-reverse;
@@ -845,7 +836,7 @@ footer {
 /* Small Phones (x to 480px) */
 @media screen and (min-width: 353px) and (max-width: 767px){
 
-/* Estilos de la sección menú de navegación + logo */
+/* Styles nav + logo */
 
 header {
     display: flex;
@@ -872,7 +863,6 @@ h2 {
 
 nav ul {
     display: none;
-    
 }
     
 .logo-container {
@@ -886,7 +876,7 @@ nav ul {
     height: auto;
 }
 
-/* Estilos de la sección hero */
+/* Styles section hero */
 
 .hero {
     display: flex;
@@ -895,22 +885,22 @@ nav ul {
     }
 
 .hero-image {
-    width: 100%; /* modificado*/
-    height: auto; /* modificado*/
-    padding-top: 10px; /* modificado*/
-    padding-bottom: 10px;/* modificado*/
+    width: 100%; 
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .hero-text h1 {
-    font-size: 2.6rem; /* modificado*/
+    font-size: 2.6rem;
 }
 
 .hero-text p {
-    font-size: 1.2rem; /* modificado*/
+    font-size: 1.2rem;
 }
 
 .search-box {
-    max-width: 100%; /* modificado*/
+    max-width: 100%;
 }
 
 
@@ -921,14 +911,14 @@ nav ul {
     cursor: pointer;
 }
 
-/* Estilos Categories */
+/* Styles Categories */
 
 .categories {
     background-color: rgba(217, 217, 217, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de mejores ventas */  
+/* Styles meilleures ventes */  
 
 .grid-container {
     grid-template-columns: repeat(1, 1fr);
@@ -939,7 +929,7 @@ nav ul {
     height: auto;
 }
 
-/* Estilos Libros recomendados */
+/* Styles Featured */
 
 .featured-books {
     flex-direction: column;
@@ -961,7 +951,7 @@ nav ul {
     display: none;
 }
 
-/* Estilos Top Clientes */
+/* Styles Top Clients */
 
 .client-item {
     display: flex;
@@ -984,7 +974,7 @@ nav ul {
 
 
 .client-details p {
-    text-align: center; /* en la maqueta está a la izquierda, pero me gusta más centrado */
+    text-align: center;
 }
 
 .client-details button {
@@ -1005,11 +995,12 @@ nav ul {
 }
 
 
-/* Estilo Newsletter */
+/* Styles Newsletter */
 
 .newsletter {
     padding: 1rem;
 }
+
 .newsletter form {
     display: flex;
     flex-direction: column;
@@ -1017,7 +1008,7 @@ nav ul {
     align-items: center;
 }
 
-/* Estilo Footer */
+/* Styles Footer */
 
 footer {
     flex-direction: column-reverse;
@@ -1025,243 +1016,231 @@ footer {
     margin: 1.25rem;
     padding: 0;
 }
-
-
 }
 
 
 /* Tablets (768px - 1024) */
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
-    header {
-        justify-content: center;
-        align-items: center;
-        background-color: #F1B814; 
-        padding: 10px 20px;
-    }
+header {
+    justify-content: center;
+    align-items: center;
+    background-color: #F1B814; 
+    padding: 10px 20px;
+}
 
-    .logo {
-        padding-bottom: 15px;
-    }
+.logo {
+    padding-bottom: 15px;
+}
 
-    /* Estilos de la sección hero */  
+    /* Styles section hero */  
      
-    .hero {
-        flex-direction: column; /* modificado */
-        text-align: center; /* modificado */
-    }
+.hero {
+    flex-direction: column; 
+    text-align: center;
+}
 
-    .hero-text h1 {
-        font-size: 2rem; /* modificado */
-        padding-top: 2.5rem; /* modificado */
-    } 
+.hero-text h1 {
+    font-size: 2rem;
+    padding-top: 2.5rem;
+} 
 
-    .hero-text p {
-        font-size: 1.2rem; /* modificado */
-        padding-bottom: 2.5rem; /* modificado */
+.hero-text p {
+    font-size: 1.2rem;
+    padding-bottom: 2.5rem;
+}
 
-    }
+.hero-image { 
+    width: 100%;
+    height: 20rem;
+}
 
-    .hero-image { 
-        width: 100%; /* modificado */
-        height: 20rem; /* modificado */
-    }
-
-    .search-box {
-        padding: 1rem; /* modificado */
-        max-width: 100%; /* modificado */
-        background-color: #F1B814; /* modificado */
-        margin: 0; /* modificado */
-        display: flex; /* modificado */
-        flex-wrap: wrap; /* modificado */
-        justify-content: center; /* modificado */
-        align-items: center; /* modificado */
-    }
+.search-box {
+    padding: 1rem;
+    max-width: 100%;
+    background-color: #F1B814;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
     
-    .search-box h2 {
-        margin: 0; /* modificado */
-    }
+.search-box h2 {
+    margin: 0;
+}
     
-    .search-box form {
-        flex-direction: row; /* modificado */
-        gap: 0.75rem; /* modificado */
-    }
+.search-box form {
+    flex-direction: row; 
+    gap: 0.75rem;
+}
     
 
-    /* Estilos recomendaciones = Featured books */
+    /* Styles Featured books */
 
-    .featured-books {
-        display: none;
-    }
+.featured-books {
+    display: none;
+}
 
-    .container-featured-books {
-        display: contents;
-    }
+.container-featured-books {
+    display: contents;
+}
 
-    .book-section-1 {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        background-color: #fff;
-        margin-bottom: 20px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.book-section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    .book-section-2 {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        background-color: #fff;
-        margin-bottom: 20px;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.book-section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
     
-    .book {
-        display: flex;
-        align-items: center;
-    }
+.book {
+    display: flex;
+    align-items: center;
+}
     
-    .book img {
-        width: 150px;
-        height: 250px;
-        margin: 0;
-        border-radius: 8px;
-        border: 5px solid #F1B814;
-    }
+.book img {
+    width: 150px;
+    height: 250px;
+    margin: 0;
+    border-radius: 8px;
+    border: 5px solid #F1B814;
+}
     
-    .book-info {
-        width: 35rem;
-        background-color: rgba(217, 217, 217, 0.2);
-        padding: 1.25rem;
-    }
+.book-info {
+    width: 35rem;
+    background-color: rgba(217, 217, 217, 0.2);
+    padding: 1.25rem;
+}
     
-    .book-info h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
+.book-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
     
-    .book-info button {
-        background-color: #bf0a30;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+.book-info button {
+    background-color: #BD1E51;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
     
-    .book-info button:hover {
-        background-color: #9a0826;
-    }
+.book-info button:hover {
+    background-color: #a11a42;
+}
 
-     /* Estilos de mejores ventas */
+/* Styles meilleures ventes */
 
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
+.grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
 
-    .grid-item {
-        height: auto;
-    }
+.grid-item {
+    height: auto;
+}
 
-    /* Estilos top Clientes */
+/* Estilos top Clientes */
 
-        .client-item {
-            grid-template-columns: 150px 1fr;
-            gap: 20px;
-            background-color: rgba(217, 217, 217, 0.2);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            padding: 20px;
+.client-item {
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+}
+    
+.client-item img {
+    margin-right: 20px;    
+}
+    
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
         
-        }
+.client-details .rating {
+    justify-content: left;
+}
     
-        .client-item img {
-            margin-right: 20px;    
-        }
-    
-        .client-details {
-            display: flex;
-            flex-direction: column;
-        }
+.client-details button {
+    align-self: flex-end;
+    margin-top: auto;
+}
         
-        .client-details .rating {
-            justify-content: left;
-        }
+.client-item .client-details {
+    background-color: transparent;
+    box-shadow: none;
+}
     
+.client-item .client-details .client-header {
+    padding: 0 0 30px 0;
+}
+    
+.client-item .client-details .description {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 15px 0;
+}
         
-        .client-details button {
-            align-self: flex-end;
-            margin-top: auto;
-        }
-        
-    
-        .client-item .client-details {
-            background-color: transparent;
-            box-shadow: none;
-        }
-    
-        .client-item .client-details .client-header {
-            padding: 0 0 30px 0;
-    
-        }
-    
-        .client-item .client-details .description {
-            grid-column: 2;
-            grid-row: 2;
-            padding: 15px 0;
-    
-        }
-        
-        .client-item .client-details .price-top {
-            grid-column: 2;
-            grid-row: 1;
-            padding: 10px;
-            justify-self: self-start;
-    
-        }
+.client-item .client-details .price-top {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px;
+    justify-self: self-start;
+}
 }
 
 /* laptops (1024px and 1280) */
 @media screen and (min-width: 1024px) and (max-width: 1280px){
 
-    header {
-        justify-content: center;
-        align-items: center;
-        background-color: #F1B814; 
-        padding: 10px 20px;
-    }
+header {
+    justify-content: center;
+    align-items: center;
+    background-color: #F1B814; 
+    padding: 10px 20px;
+}
 
-    .logo {
-        padding-bottom: 15px;
-    }
+.logo {
+    padding-bottom: 15px;
+}
 
-    nav ul li a {
-        font-size: 18px;
-        
-    }
+nav ul li a {
+    font-size: 18px;
+}
 
-    /* Estilos de mejores ventas */  
+/* Styles meilleures ventes */  
 
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
 
-    .grid-item {
-        height: auto;
-    }
+.grid-item {
+    height: auto;
+}
 
-    /* Estilo Featured books */
+/* Styles Featured books */
 
-    .container-featured-books {
-        display: none;
-    }
-
-
+.container-featured-books {
+    display: none;
+}
 }
