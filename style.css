@@ -165,6 +165,7 @@ nav ul li a .heart {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #D9D9D9;
+    border-radius: 8px;
     font-size: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #001730;
@@ -224,10 +225,6 @@ nav ul li a .heart {
 
 .best-sellers {
     padding: 1.25rem;
-    /*display: flex;  modificado */
-    /*flex-wrap: wrap;  modificado */
-    /*justify-content: space-around;  modificado */
-    /*align-items: center;  modificado */
 }
 
 .grid-container {
@@ -403,81 +400,103 @@ nav ul li a .heart {
 
 /* Estilo Top Clientes */
 
-.top-clients {
-    margin-left: 1.5rem;
-}
-
-.client-item {
+.contenedor-grid {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 30px;
-    margin-right: 30px;
-    padding: 20px;
-    align-items: center;
-
-}
-
-.client-item img {
-    width: 150px;
-    height: 250px;
-    border: 5px solid #F1B814;
-    border-radius: 5px;
-    margin-right: 20px;
-    background-size: cover;
-
-}
-
-.client-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.client-details h3 {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-}
-
-.client-details p {
-    font-size: 1rem;
-    margin: 0 0 10px 0;
-    color: #001730;
-}
-
-.client-details .rating {
-    color: #FFD700;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: left;
-}
-
-.client-details .price {
-    background-color: #BD1E51;
-    color: white;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    align-self: flex-start;
-}
-
-.client-details button {
-    background-color: #BD1E51;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    align-self: flex-start;
-    margin-top: auto;
-}
-
-.client-details button:hover {
-    background-color: #a11a42;
-}
+    }
+    
+    .top-clients {
+        margin-left: 1.5rem;
+    }
+    
+    
+    /* Definicion del contenedor */
+    
+    .client-item {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 0;
+        background-color: white;
+        margin: 20px 30px;
+        padding: 20px;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    /*Definicion de los items dentro del contenedor*/
+    
+    .client-item img {
+        grid-column: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 150px;
+        height: 250px;
+        border: 5px solid #F1B814;
+        border-radius: 8px;
+        background-size: cover;
+    }
+    
+    .client-item .client-details {
+        display: grid;
+        background-color: rgba(217, 217, 217, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        min-height: 150px;
+        max-height: 220px;
+    }
+    .client-details .client-header {
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 15px;
+    }
+    .client-details .description {
+        grid-column: 3;
+        grid-row: 1;
+        padding: 15px;
+    }
+    .client-details .price-top {
+        grid-column: 3;
+        grid-row: 2;
+        padding: 10px;
+    }
+    .client-header {
+        margin-bottom: 10px;
+    }
+    
+    .client-details h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    .client-details p {
+        font-size: 1rem;
+        margin: 0;
+        color: #001730;
+    }
+    
+    .client-details .rating {
+        color: #FFD700;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .client-details .price-top {
+        background-color: #BD1E51;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 0;
+        justify-self: end;
+        min-width: 200px;
+    }
+    
+    .client-details button:hover {
+        background-color: #a11a42;
+    }
 
 
 /* Estilo Newsletter */
@@ -638,85 +657,6 @@ footer {
     
 }
 
-/* PRUEBA */
-
-/* Estilo Top Clientes */
-
-.top-clients1 {
-    margin-left: 1.5rem;
-}
-
-.client-item1 {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 10px;
-    background-color: white;
-    margin: 20px 30px;
-    padding: 20px;
-    align-items: center;
-}
-
-.client-item1 img {
-    width: 150px;
-    height: 250px;
-    border: 5px solid #F1B814;
-    border-radius: 5px;
-    background-size: cover;
-}
-
-.client-details1 {
-    display: flex;
-    background-color: rgba(217, 217, 217, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    justify-content: space-between; /* Distribute space between elements */
-}
-
-.client-header1 {
-    margin-bottom: 10px;
-}
-
-.client-details1 h3 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.client-details1 p {
-    font-size: 1rem;
-    margin: 0;
-    color: #001730;
-    padding-left: 15px;
-}
-
-.client-details1 .rating {
-    color: #FFD700;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.client-details1 .description {
-    margin-bottom: 20px;
-    color: #001730;
-    flex-grow: 1;
-}
-
-.client-details1 button {
-    background-color: #BD1E51;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    align-self: flex-start;
-    margin: auto;
-}
-
-.client-details1 button:hover {
-    background-color: #a11a42;
-}
-
-
 
 /* ====== MEDIA QUERIES ====== */
 
@@ -851,13 +791,6 @@ nav ul {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.client-item img {
-    width: 150px;
-    height: 250px;
-    border: 5px solid #F1B814;
-    border-radius: 5px;
-    margin-right: 0;
-}
 
 .client-details {
     display: flex;
@@ -866,36 +799,28 @@ nav ul {
     text-align: center;
 }
 
-.client-details h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
 
 .client-details p {
-    font-size: 1rem;
     text-align: center; /* en la maqueta está a la izquierda, pero me gusta más centrado */
-    margin: 0 0 10px 0;
-    color: #001730;
-}
-
-.client-details .rating {
-    color: #FFD700;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
 }
 
 .client-details button {
-    /* align-content: center; */
-    background-color: #BD1E51;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
     align-self: center;
     width: 18rem;
 }    
+
+.client-item .client-details {
+    display: flex;
+    background-color: transparent;
+    box-shadow: none;
+    min-height: auto;
+    max-height: 500px;
+}
+
+.client-details .rating {
+    justify-content: center;
+}
+  
 
 /* Estilo Newsletter */
 
@@ -909,7 +834,7 @@ nav ul {
 /* Estilo Footer */
 
 footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: start;
     margin: 15px;
     padding: 0;
@@ -939,7 +864,7 @@ h2 {
     
 .menu-togle {
     display: block;
-    background-color: #F1B814; /* CAMBIAR EL DISEÑO DEL TOGGLE */
+    background-color: #F1B814;
     border: none;
     font-size: 1.5em;
     cursor: pointer;
@@ -1049,13 +974,6 @@ nav ul {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.client-item img {
-    width: 150px;
-    height: 250px;
-    border: 5px solid #F1B814;
-    border-radius: 5px;
-    margin-right: 0;
-}
 
 .client-details {
     display: flex;
@@ -1064,35 +982,27 @@ nav ul {
     text-align: center;
 }
 
-.client-details h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
 
 .client-details p {
-    font-size: 1rem;
-    margin: 0 0 10px 0;
-    color: #001730;
-}
-
-.client-details .rating {
-    color: #FFD700;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
+    text-align: center; /* en la maqueta está a la izquierda, pero me gusta más centrado */
 }
 
 .client-details button {
-    /* align-content: center; */
-    background-color: #BD1E51;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
     align-self: center;
     width: 18rem;
 }    
+
+.client-item .client-details {
+    display: flex;
+    background-color: transparent;
+    box-shadow: none;
+    min-height: auto;
+    max-height: 500px;
+}
+
+.client-details .rating {
+    justify-content: center;
+}
 
 
 /* Estilo Newsletter */
@@ -1110,7 +1020,7 @@ nav ul {
 /* Estilo Footer */
 
 footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: start;
     margin: 1.25rem;
     padding: 0;
@@ -1248,7 +1158,7 @@ footer {
         background-color: #9a0826;
     }
 
-     /* Estilos de mejores ventas */  
+     /* Estilos de mejores ventas */
 
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1259,6 +1169,62 @@ footer {
         height: auto;
     }
 
+    /* Estilos top Clientes */
+
+        .client-item {
+            grid-template-columns: 150px 1fr;
+            gap: 20px;
+            background-color: rgba(217, 217, 217, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+        
+        }
+    
+        .client-item img {
+            margin-right: 20px;    
+        }
+    
+        .client-details {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .client-details .rating {
+            justify-content: left;
+        }
+    
+        
+        .client-details button {
+            align-self: flex-end;
+            margin-top: auto;
+        }
+        
+    
+        .client-item .client-details {
+            background-color: transparent;
+            box-shadow: none;
+        }
+    
+        .client-item .client-details .client-header {
+            padding: 0 0 30px 0;
+    
+        }
+    
+        .client-item .client-details .description {
+            grid-column: 2;
+            grid-row: 2;
+            padding: 15px 0;
+    
+        }
+        
+        .client-item .client-details .price-top {
+            grid-column: 2;
+            grid-row: 1;
+            padding: 10px;
+            justify-self: self-start;
+    
+        }
 }
 
 /* laptops (1024px and 1280) */
@@ -1296,5 +1262,6 @@ footer {
     .container-featured-books {
         display: none;
     }
+
 
 }
