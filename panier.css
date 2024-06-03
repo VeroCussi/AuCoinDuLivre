@@ -618,7 +618,98 @@ footer {
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (max-width: 352px){
+    header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1B814;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+            
+    .menu-togle {
+        display: block;
+        background-color: #F1B814;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+        
+    nav ul {
+        display: none;      
+    }
+            
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+            
+    .logo {
+        width: 15rem;
+        max-width: 320px;
+        height: auto;
+    }    
+
+    /* Styles container */
+
+    .container {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .left-section,
+    .right-section {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .login-form {
+        flex-direction: column;
+    }
+
+    .card-details input[type="text"] {
+        width: 100%;
+    }
+
+    .promo-section p {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-top: 1.25rem;
+    }
+
+    .faq-section {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    /* Styles Footer */
+
+    footer {
+        flex-direction: column;
+        align-items: start;
+        margin: 1.25rem;
+        padding: 0;
+    }
+
+}    
+
+@media screen and (min-width: 353px) and (max-width: 767px) {
 
     /* Styles Menu */
 
@@ -696,7 +787,7 @@ footer {
     /* Styles Footer */
 
     footer {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: start;
         margin: 1.25rem;
         padding: 0;
