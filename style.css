@@ -234,7 +234,7 @@ nav ul li a .heart {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
+    gap: 1rem;
     justify-items: center;
 }
 
@@ -757,7 +757,7 @@ nav ul {
 
 .featured-books {
     flex-direction: column;
-    padding: 10px;
+    padding: 0;
 }
 
 .featured-book img {
@@ -770,7 +770,7 @@ nav ul {
 }
 
 .featured-book-info button{
-    width: 18rem;
+    width: 15rem;
 }
 
 /* Styles Top Clients */
@@ -781,6 +781,7 @@ nav ul {
     align-items: center;
     border-radius: 0px;
     margin: 20px 0;
+    padding: 0;
     gap: 20px;
     background-color: rgba(217, 217, 217, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -801,7 +802,7 @@ nav ul {
 
 .client-details button {
     align-self: center;
-    width: 18rem;
+    width: 15rem;
 }    
 
 .client-item .client-details {
@@ -810,6 +811,7 @@ nav ul {
     box-shadow: none;
     min-height: auto;
     max-height: 500px;
+    padding: 15px 0;
 }
 
 .client-details .rating {
